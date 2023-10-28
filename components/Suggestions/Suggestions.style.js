@@ -1,5 +1,7 @@
 import { Dimensions, StyleSheet } from "react-native";
 
+const ios = Platform.OS === "ios";
+
 const screenWidth = Dimensions.get("window").width;
 
 export default StyleSheet.create({
@@ -13,8 +15,9 @@ export default StyleSheet.create({
     fontSize: 20,
     justifyContent: "center",
     alignContent: "center",
+
     borderBottomColor: "#fff",
-    borderBottomWidth: 1,
+    borderBottomWidth: 2,
     fontWeight: "bold",
   },
   suggestions_item: {
@@ -41,7 +44,7 @@ export default StyleSheet.create({
     color: "#fff",
     flex: 1,
     paddingLeft: 10,
-    fontSize: 20,
+    fontSize: ios ? 15 : 20,
     color: "#2a2b40",
   },
 });

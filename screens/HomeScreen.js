@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { SafeAreaView, Dimensions } from "react-native";
+import { SafeAreaView, Dimensions, ScrollView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import styles from "./HomeScreen.style";
-import datawebiner from "../utils/data.json";
 import Video from "../components/Video/Video";
 import Sections from "../components/Sections/Sections";
 import Suggestions from "../components/Suggestions/Suggestions";
+import datawebiner from "../utils/data.json";
 
 const HomeScreen = () => {
   const [data, setData] = useState(null);

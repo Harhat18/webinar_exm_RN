@@ -1,4 +1,6 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
+
+const ios = Platform.OS === "ios";
 
 export default StyleSheet.create({
   sections_container: { flex: 1, marginBottom: 10 },
@@ -27,7 +29,7 @@ export default StyleSheet.create({
   },
   sections_item_icon: { marginRight: 10 },
   sections_item_text: {
-    fontSize: 16,
+    fontSize: ios ? 13 : 16,
     color: "#fff",
     flex: 1,
   },
